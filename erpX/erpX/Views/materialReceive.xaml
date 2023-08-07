@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="erpX.Views.materialReceive"
+             xmlns:vm="clr-namespace:erpX.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:materialReceive />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#ebf0ec">
+                
+                    <Frame x:Name="operationFrame">
+
+                    <StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Operation" TextColor="Black" HorizontalTextAlignment="Center" Margin="0, 0, 0, 40"  FontSize="Medium" FontAttributes="Bold" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Project" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="project" TextColor="Black" Margin="50,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Supplier" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="supplier" TextColor="Black" Margin="42,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Order" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="order" TextColor="Black" Margin="62,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="MRR Date" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="mrrDate" TextColor="Black" Margin="30,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="MRR No" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="mrrNo" TextColor="Black" Margin="43,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+
+                        <StackLayout>
+                            <Button Text="New" TextColor="Black" VerticalOptions="Center" Margin="280, 50, 0, 20" BackgroundColor="#d0f5f2" CornerRadius="10" Clicked="newButton_Clicked" ></Button>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame x:Name="newFrame" IsVisible="False">
+                    <StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Chalan No" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="chalanNo" TextColor="Black" Margin="50,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Chalan Date" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="chalanDate" TextColor="Black" Margin="36,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="QC No" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="qcNo" TextColor="Black" Margin="80,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="Resource List" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="resourceList" TextColor="Black" Margin="24,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="QC Parameter" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="qcParameter" TextColor="Black" Margin="22,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout HorizontalOptions="Start">
+                                <Label Text="QC Note" TextColor="Black" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Entry  x:Name="qcNote" TextColor="Black" Margin="65,0,0,0"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+
+                        <StackLayout>
+                            <Button Text="Select" ImageSource="select.png"  TextColor="Black" VerticalOptions="Center" Margin="260, 50, 0, 20" BackgroundColor="#d0f5f2" CornerRadius="10" ></Button>
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
